@@ -1,0 +1,39 @@
+$small:     540px
+$medium:    720px
+$large:     960px	
+
+$spacing: 20px
+
+=respond-mobile
+    @media (max-width: $small)
+        @content
+
+=respond-tablet
+    @media (max-width: $medium)
+        @content
+
+=respond-big-tablet
+    @media (max-width: $large)
+        @content
+
+=respond-desktop
+    @media (min-width: $large)
+        @content
+
+.width-70
+    width: 70%
+    +respond-tablet
+        width: 80%
+    +respond-mobile
+        width: 100%
+
+.spacer-l
+    margin: ($spacing * 3) 0
+    +respond-mobile
+        margin: $spacing 0
+.spacer-m
+    margin: ($spacing * 2) 0
+    +respond-mobile
+        margin: $spacing 0
+.spacer-s
+    margin: $spacing 0

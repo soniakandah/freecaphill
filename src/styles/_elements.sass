@@ -1,0 +1,16 @@
+.btn
+    width: 300px
+    margin: $spacing 0
+    padding: $spacing
+    text-align: center
+    background-color: $pink
+    border-radius: 50px
+    color: $white!important
+    +body-font
+    +font-size($font-s)
+
+    +respond-mobile
+        width: 90%
+
+    &:hover
+        background-color: darken($pink, 25%)

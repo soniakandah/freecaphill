@@ -1,0 +1,19 @@
+footer
+    background-color: $dark
+    padding: $spacing * 3 0
+    text-align: center
+    +font-size($font-l)
+
+    +respond-tablet
+        padding: $spacing * 2 0
+
+    +respond-mobile
+        padding: $spacing 0
+
+    a
+        color: $gray
+        display: inline-block
+        margin: 0 $spacing * 2
+
+        &:hover
+            color: $pink

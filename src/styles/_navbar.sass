@@ -1,0 +1,106 @@
+$nav-height: 110px 
+$nav-height-mobile: 90px
+$nav-background: rgba(255,255,255,0.8)
+
+.main-nav
+    position: absolute
+    top: 0px
+    display: block
+    width: 100%
+    height: $nav-height
+    background-color: $nav-background
+
+    +respond-mobile
+        height: $nav-height-mobile
+
+    .logo
+        display: inline-block
+        float: left
+        margin-left: $spacing
+        margin-top: 5px
+
+        +respond-mobile
+            margin-left: 5px
+
+        img
+            width: $nav-height - 10
+            height: auto
+
+            +respond-mobile
+                width: $nav-height-mobile - 10
+
+    .mobile-collapse
+        position: relative
+
+        .icon
+            display: none
+            &::selection
+                color: none
+                background: none
+        +respond-tablet
+            &.open
+                .hamburger
+                    display: none
+                .hamburger-open
+                    display: block
+                    position: absolute
+                    top: 0px
+                    right: 0px
+                ul
+                    width: 100%
+                    position: absolute
+                    top: $nav-height
+                    display: block
+                    margin: 0px
+                    text-align: right
+                    background-color: $nav-background
+                    padding-bottom: $spacing
+                    z-index: 2
+
+                    +respond-mobile
+                        top: $nav-height-mobile
+
+                li
+                    display: block
+                    margin: 0px
+                    +font-size($font-m)
+
+                    a
+                        display: block
+                        padding: $spacing
+            .hamburger
+                display: block
+            .icon
+                cursor: pointer
+                float: right
+                font-size: $font-l
+                margin-top: 25px
+                margin-right: $spacing
+
+                +respond-mobile
+                    margin-top: 18px
+            ul
+                display: none
+    ul
+        list-style-type: none
+        padding: 0px
+        margin: 0px
+        display: inline-block
+        float: right
+        margin-right: $spacing * 2
+        margin-top: 30px
+
+        li
+            display: inline-block
+            margin: 10px
+            +font-size($font-m - 5)
+
+            +respond-big-tablet
+                +font-size($font-s + 2)
+
+            &:last-child
+                margin-right: 0px
+
+            a
+                color: inherit
+                text-transform: uppercase

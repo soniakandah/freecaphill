@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap')
+
+@import 'material-icons/iconfont/material-icons.scss'
+
+$font-xs: 16px
+$font-s: 20px
+$font-m: 32px
+$font-l: 55px
+$font-xl: 75px
+
+=display-font
+    font-family: 'Oswald', sans-serif
+
+=body-font
+    font-family: 'Rubik', sans-serif
+    font-weight: 300
+
+=font-size($size)
+    font-size: $size
+    +respond-tablet
+        font-size: $size * 0.8
+        @if $size * 0.8 < $font-s
+            font-size: $font-s
+    +respond-mobile
+        font-size: $size * 0.6
+        @if $size * 0.6 < $font-xs
+            font-size: $font-xs
+
+.icon
+    +material-icons()
+
+body
+    +font-size($font-xs)
+    +body-font
+
+h1, h2, h3
+    text-transform: uppercase
+    +display-font
+
+h1
+    margin-bottom: $spacing * 2
+    +font-size($font-xl)
+
+h2
+    margin-bottom: $spacing * 2
+    +font-size($font-l)
+
+h3
+    +font-size($font-m + 5)
+
+h4
+    font-weight: 300
+    text-transform: uppercase
+    +font-size($font-m)
+
+h5
+    font-weight: 400
+    +font-size($font-s + 5)
+
+h6
+    font-weight: 400
+    +font-size($font-s + 5)
+
+p
+    font-weight: 300
+    line-height: 2
+    +font-size($font-s)
+
+a
+    color: $pink
+
+    &:hover
+        color: darken($pink, 25% )

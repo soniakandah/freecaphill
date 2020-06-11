@@ -1,0 +1,79 @@
+.container
+
+    +respond-big-tablet
+        max-width: 850px
+        width: 90%
+    +respond-mobile
+        width: 100%
+
+section
+    padding-top: $spacing * 3
+    padding-bottom: $spacing * 3
+
+    &.top
+        padding-top: $spacing * 3 + $nav-height
+
+    +respond-tablet
+        padding-top: $spacing * 2
+        padding-bottom: $spacing * 2
+
+        &.top
+            padding-top: $spacing * 2 + $nav-height
+
+    +respond-mobile
+
+        padding-top: $spacing
+        padding-bottom: $spacing
+
+        &.top
+            padding-top: $spacing + $nav-height-mobile
+
+    &.photo-bk
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+
+.theme-01
+    position: relative
+    background-color: $white
+
+    .hero
+        position: absolute
+        width: 30%
+        top: 0
+        bottom: 0
+        right: 0
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+    .content
+        width: 70%
+
+    &.right
+        .hero
+            right: unset
+            left: 0
+        .content
+            margin-left: auto
+            margin-right: 0px
+            text-align: right
+
+    &.off-white
+        background-color: $off-white
+
+    +respond-tablet
+        .content
+            width: 100%
+            padding-top: 200px
+
+        &.right
+            .content
+                text-align: left
+
+        .hero
+            width: 100%
+            left: 0
+            right: unset
+            top: 0
+            bottom: unset
+            height: 200px
