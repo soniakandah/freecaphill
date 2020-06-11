@@ -1,0 +1,103 @@
+{
+  "_from": "react_google_calendar",
+  "_id": "react_google_calendar@2.2.4444",
+  "_inBundle": false,
+  "_integrity": "sha512-Cp0ptuhiLDAuAxEFFn/zeHBa/ANQIJKdTAvfcWZryCpDCTrizGixY2m4dwoe09rp+jX4wUJUZBrwIs0uDEAiLw==",
+  "_location": "/react_google_calendar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react_google_calendar",
+    "name": "react_google_calendar",
+    "escapedName": "react_google_calendar",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react_google_calendar/-/react_google_calendar-2.2.4444.tgz",
+  "_shasum": "ddc6b5ca9de22f801ea231a93400840a9d31ad60",
+  "_spec": "react_google_calendar",
+  "_where": "/Users/soniakandah/Documents/Repos/freecaphill",
+  "author": {
+    "name": "crash",
+    "email": "ccrsh@riseup.net"
+  },
+  "bugs": {
+    "url": "https://github.com/crashspringfield/react-google-calendar/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "autoprefixer": "^9.5.1"
+  },
+  "deprecated": false,
+  "description": "An implementation of react-big-calendar populated by linked Google calendars",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "gh-pages": "^2.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.7.1",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.18.2",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^1.12.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.4"
+  },
+  "homepage": "https://crashspringfield.github.io/react-google-calendar/",
+  "keywords": [
+    "react",
+    "google",
+    "calendar"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "react_google_calendar",
+  "peerDependencies": {
+    "array.prototype.flat": "^1.2.1",
+    "bluebird": "^3.5.2",
+    "moment": "^2.22.2",
+    "react": "^16.6.3",
+    "react-big-calendar": "^0.20.2",
+    "react-dom": "^16.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crashspringfield/react-google-calendar.git"
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d examples/dist",
+    "prepublishOnly": "npm run transpile",
+    "publish-demo": "npm run build && npm run deploy",
+    "start": "webpack-dev-server --mode development --open --display-error-details",
+    "test": "jest",
+    "transpile": "babel src -d dist --copy-files"
+  },
+  "version": "2.2.4444"
+}

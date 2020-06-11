@@ -9,7 +9,7 @@
 
 body
     margin: 0px
-    border: 5px solid black
+    border: 0px solid black
 
     +respond-big-tablet
         border-color: blue
@@ -19,7 +19,6 @@ body
         border-color: green
 
 .reddit-container
-
     .reddit-post
         display: block
         background-color: $off-white
@@ -46,20 +45,14 @@ body
             bottom: 0
             left: 0
             width: 60px
+            display: flex
 
             .content
-                width: 100%
                 display: block
-                position: absolute
                 top: 50%
-                margin-top: -50px
                 text-align: center
-
-                +respond-tablet
-                    margin-top: -40px
-
-                +respond-mobile
-                    margin-top: -30px
+                flex-basis: 100%
+                align-self: center
 
                 span
                     width: 100%
@@ -86,3 +79,84 @@ body
             line-height: 1.3
             margin-bottom: 0px
             +font-size($font-xs)
+
+.upcoming-events
+    .event
+        display: block
+        background-color: $off-white
+        padding: $spacing
+        margin-bottom: $spacing
+        color: black
+        position: relative
+
+        +respond-tablet
+            padding: 0px
+
+        &:hover
+            text-decoration: none
+            background-color: lighten($pink, 15%)
+            .date-time
+                background-color: $pink
+
+        .date-time
+            display: block
+            position: absolute
+            background-color: lighten($pink, 15%)
+            top: 0
+            bottom: 0
+            left: 0
+            width: 150px
+            text-align: center
+            display: flex
+
+            +respond-tablet
+                width: 100%
+                padding: $spacing / 2
+                position: relative
+                top: 0
+                bottom: unset
+                margin-bottom: $spacing
+
+            .content
+                display: block
+                text-align: center
+                flex-basis: 100%
+                align-self: center
+
+                span
+                    width: 100%
+                    display: block
+                    max-width: 120px
+                    margin: 0 auto
+                    +font-size($font-s)
+
+                    &.length
+                        font-style: italic
+                        opacity: 0.7
+                        +font-size($font-xs)
+
+        &:last-child
+            margin-bottom: 0px
+
+        .meta
+            margin-left: 60px
+            line-height: 1.3
+            font-style: italic
+            opacity: 0.7
+            +font-size($font-xs)
+
+        .title, .summary
+            margin-left: 150px
+
+            +respond-tablet
+                margin: $spacing
+
+        .title
+            margin-bottom: $spacing / 2
+
+        .summary
+            line-height: 1.3
+            margin-bottom: 0px
+            +font-size($font-xs)
+            +respond-tablet
+                padding-bottom: $spacing

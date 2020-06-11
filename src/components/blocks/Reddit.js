@@ -5,8 +5,9 @@ function RedditList(props) {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         async function getPosts() {
+            let query = props.query ? props.query : '';
             const res = await fetch(
-                'https://www.reddit.com/r/freeCapHill/top.json',
+                'https://www.reddit.com/r/freeCapHill/' + props.content + query,
             );
 
             const json = await res.json();
@@ -15,7 +16,7 @@ function RedditList(props) {
         }
 
         getPosts();
-    }, []);
+    }, [props.content, props.query]);
 
     let renderedPosts = [];
 

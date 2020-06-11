@@ -8,11 +8,12 @@ function Forum(props) {
         <>
             <HeaderA
                 className='top photo-bk'
-                image='https://i.imgur.com/0d32pMe.png'
+                image='https://i.imgur.com/iIREPHr.png'
             >
                 <h1 className='width-70'>Speak up, be heard.</h1>
                 <h4>Help build our community by sharing your ideas.</h4>
             </HeaderA>
+
             <Section>
                 <p>
                     We want to hear your thoughts about how to make this
@@ -47,7 +48,7 @@ function Forum(props) {
                 <p className='spacer-m'></p>
                 <h2>Current Top Posts</h2>
                 <div className='reddit-container'>
-                    <Reddit />
+                    <Reddit content='top.json' />
                 </div>
             </Section>
         </>
